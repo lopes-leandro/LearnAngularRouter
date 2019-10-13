@@ -1,0 +1,8 @@
+<div class="container">
+  <div *ngFor="let post of posts">
+    <h1>{{post.title}}</h1>
+    <p>{{post.description}}</p>
+    <a [routerLink]="[post.id, 'ssd', 'asdad']" class="btn btn-primary">Ver Mais</a>
+    <hr>
+  </div>
+</div>

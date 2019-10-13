@@ -5,3 +5,7 @@ export class Post {
     description: string;
 }
 
+export class PostResolved {
+    post: Post;
+    error?: string;
+}

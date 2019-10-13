@@ -19,6 +19,7 @@ export class PostDetailComponent implements OnInit {
   ) { }
 
   post: Post;
+  errorMessage: string;
 
   ngOnInit() {
     // console.log(this.route.snapshot.paramMap.get('id'));
@@ -28,7 +29,10 @@ export class PostDetailComponent implements OnInit {
     //     this.post = post;
     //   });
     // });
-    this.post = this.route.snapshot.data.resolveData;
+    this.post = this.route.snapshot.data.resolveData.post;
+    this.errorMessage = this.route.snapshot.data.resolveData.error;
+    // console.log(this.post);
+    // console.log(this.errorMessage);
   }
 
   gotoPosts() {

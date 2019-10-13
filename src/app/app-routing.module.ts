@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './views/about/about.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { PostModule } from './views/post/post.module';
-import { DashboardModule } from './views/dashboard/dashboard.module';
 
 const routes: Routes = [
   {
@@ -11,7 +10,7 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'dash',
+    path: 'financas',
     redirectTo: '/dashboard',
     pathMatch: 'full'
   },
@@ -27,7 +26,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [PostModule, DashboardModule, RouterModule.forRoot(routes)],
+  imports: [PostModule, RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

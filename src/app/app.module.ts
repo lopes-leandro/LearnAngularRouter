@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AboutComponent } from './views/about/about.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { DashboardModule } from './views/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
   ],
   imports: [
     BrowserModule,
+    DashboardModule,
     AppRoutingModule
   ],
   providers: [],

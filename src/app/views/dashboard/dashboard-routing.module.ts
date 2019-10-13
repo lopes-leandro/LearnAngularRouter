@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './products/product.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { ProductEditComponent } from './products/product-edit/product-edit.component';
+import { ProductsModule } from './products/products.module';
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
     children: [
       {
         path: 'products',
-        component: ProductsComponent,
+        component: ProductComponent,
         children: [
           {
             path: '',
@@ -34,7 +35,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [ProductsModule, RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class DashboardRoutingModule { }

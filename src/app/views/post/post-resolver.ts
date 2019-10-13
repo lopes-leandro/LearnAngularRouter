@@ -12,7 +12,7 @@ export class PostResolver implements Resolve<PostResolved> {
 
   constructor(private postService: PostService) { }
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<PostResolved> | Promise<PostResolved> {
+  resolve(route: ActivatedRouteSnapshot, _state: RouterStateSnapshot): Observable<PostResolved> | Promise<PostResolved> {
     const id = route.paramMap.get('id');
     if (isNaN(+id)) {
       const message = `id não é um número ${id}`;

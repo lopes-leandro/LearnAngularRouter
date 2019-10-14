@@ -12,10 +12,15 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="about" routerLinkActive="active">About <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="dashboard" routerLinkActive="active">Dashboard <span class="sr-only">(current)</span></a>
-      </li>
     </ul>
   </div>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item" *ngIf="showDashboard">
+      <a class="nav-link" routerLinkActive="active" (click)="displayDashboard()">Show Dashboard</a>
+    </li>
+    <li class="nav-item" *ngIf="!showDashboard">
+      <a class="nav-link" routerLinkActive="active" (click)="hideDashboard()">Hide Dashboard</a>
+    </li>
+  </ul>
   <span class="text-light flaticon-8x flaticon-user-3"></span>
 </nav>

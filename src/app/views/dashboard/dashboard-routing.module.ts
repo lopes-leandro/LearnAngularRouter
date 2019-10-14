@@ -11,6 +11,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    outlet: 'Dashboard',
     children: [
       {
         path: 'products',
